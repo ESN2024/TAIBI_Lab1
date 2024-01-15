@@ -14,13 +14,13 @@ entity Lab1 is
 end entity Lab1;
 
 architecture behav of Lab1 is
-    component Achraf_Lab1 is
+	component Achraf_Lab1 is
         port (
-            clk_clk             : in  std_logic                    := 'X';             -- clk
-            leds_export         : out std_logic_vector(7 downto 0);                    -- export
-            reset_reset_n       : in  std_logic                    := 'X';             -- reset_n
-            switch_speed_export : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
-            trigger_export      : in  std_logic                    := 'X'              -- export
+            clk_clk                          : in  std_logic                    := 'X';             -- clk
+            pio_0_external_connection_export : in  std_logic                    := 'X';             -- export
+            pio_1_external_connection_export : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+            pio_2_external_connection_export : out std_logic_vector(7 downto 0);                    -- export
+            reset_reset_n                    : in  std_logic                    := 'X'              -- reset_n
         );
     end component Achraf_Lab1;
 	
@@ -29,11 +29,12 @@ architecture behav of Lab1 is
 
 	u0 : component Achraf_Lab1
         port map (
-            clk_clk             => clk,             --          clk.clk
-            leds_export         => leds_out,         --         leds.export
-            reset_reset_n       => reset,       --        reset.reset_n
-            switch_speed_export => speed_in, -- switch_speed.export
-            trigger_export      => trigger_in       --      trigger.export
+            clk_clk                          => clk,                          --                       clk.clk
+            pio_0_external_connection_export => trigger_in, -- pio_0_external_connection.export
+            pio_1_external_connection_export => speed_in, -- pio_1_external_connection.export
+            pio_2_external_connection_export => leds_out, -- pio_2_external_connection.export
+            reset_reset_n                    => reset                     --                     reset.reset_n
         );
+
 			
 end architecture behav;

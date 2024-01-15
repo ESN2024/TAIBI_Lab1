@@ -134,12 +134,12 @@ ACDS_VERSION := 18.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 646
+# BUILD_NUMBER: 625
 
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := exec_name.elf
+ELF := executable.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS += ../../main.c

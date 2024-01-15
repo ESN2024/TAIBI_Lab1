@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Jan 12 16:22:50 2024
-Quartus Prime Version : 18.1.1 Build 646 04/11/2019 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Mon Jan 15 10:00:59 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : TAIBI_Lab1
 Top-level Entity Name : Achraf_Lab1
 Family : MAX 10
-Total logic elements : 1,843
-    Total combinational functions : 1,654
-    Dedicated logic registers : 941
-Total registers : 941
+Total logic elements : 1,875
+    Total combinational functions : 1,680
+    Dedicated logic registers : 951
+Total registers : 951
 Total pins : 15
 Total virtual pins : 0
 Total memory bits : 331,264

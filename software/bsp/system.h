@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'Achraf_Lab1'
  * SOPC Builder design path: ../../Achraf_Lab1.sopcinfo
  *
- * Generated: Fri Jan 12 16:03:58 CET 2024
+ * Generated: Mon Jan 15 10:20:39 CET 2024
  */
 
 /*
@@ -140,6 +140,33 @@
 
 
 /*
+ * LEDS_8 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_LEDS_8 altera_avalon_pio
+#define LEDS_8_BASE 0x21030
+#define LEDS_8_BIT_CLEARING_EDGE_REGISTER 0
+#define LEDS_8_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define LEDS_8_CAPTURE 0
+#define LEDS_8_DATA_WIDTH 8
+#define LEDS_8_DO_TEST_BENCH_WIRING 0
+#define LEDS_8_DRIVEN_SIM_VALUE 0
+#define LEDS_8_EDGE_TYPE "NONE"
+#define LEDS_8_FREQ 50000000
+#define LEDS_8_HAS_IN 0
+#define LEDS_8_HAS_OUT 1
+#define LEDS_8_HAS_TRI 0
+#define LEDS_8_IRQ -1
+#define LEDS_8_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define LEDS_8_IRQ_TYPE "NONE"
+#define LEDS_8_NAME "/dev/LEDS_8"
+#define LEDS_8_RESET_VALUE 0
+#define LEDS_8_SPAN 16
+#define LEDS_8_TYPE "altera_avalon_pio"
+
+
+/*
  * System configuration
  *
  */
@@ -234,83 +261,56 @@
 
 
 /*
- * pio_0 configuration
+ * switch_speed_4 configuration
  *
  */
 
-#define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
-#define PIO_0_BASE 0x21050
-#define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_0_CAPTURE 0
-#define PIO_0_DATA_WIDTH 1
-#define PIO_0_DO_TEST_BENCH_WIRING 0
-#define PIO_0_DRIVEN_SIM_VALUE 0
-#define PIO_0_EDGE_TYPE "NONE"
-#define PIO_0_FREQ 50000000
-#define PIO_0_HAS_IN 1
-#define PIO_0_HAS_OUT 0
-#define PIO_0_HAS_TRI 0
-#define PIO_0_IRQ -1
-#define PIO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_0_IRQ_TYPE "NONE"
-#define PIO_0_NAME "/dev/pio_0"
-#define PIO_0_RESET_VALUE 0
-#define PIO_0_SPAN 16
-#define PIO_0_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_switch_speed_4 altera_avalon_pio
+#define SWITCH_SPEED_4_BASE 0x21040
+#define SWITCH_SPEED_4_BIT_CLEARING_EDGE_REGISTER 0
+#define SWITCH_SPEED_4_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SWITCH_SPEED_4_CAPTURE 0
+#define SWITCH_SPEED_4_DATA_WIDTH 4
+#define SWITCH_SPEED_4_DO_TEST_BENCH_WIRING 0
+#define SWITCH_SPEED_4_DRIVEN_SIM_VALUE 0
+#define SWITCH_SPEED_4_EDGE_TYPE "NONE"
+#define SWITCH_SPEED_4_FREQ 50000000
+#define SWITCH_SPEED_4_HAS_IN 1
+#define SWITCH_SPEED_4_HAS_OUT 0
+#define SWITCH_SPEED_4_HAS_TRI 0
+#define SWITCH_SPEED_4_IRQ -1
+#define SWITCH_SPEED_4_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SWITCH_SPEED_4_IRQ_TYPE "NONE"
+#define SWITCH_SPEED_4_NAME "/dev/switch_speed_4"
+#define SWITCH_SPEED_4_RESET_VALUE 0
+#define SWITCH_SPEED_4_SPAN 16
+#define SWITCH_SPEED_4_TYPE "altera_avalon_pio"
 
 
 /*
- * pio_1 configuration
+ * trigger configuration
  *
  */
 
-#define ALT_MODULE_CLASS_pio_1 altera_avalon_pio
-#define PIO_1_BASE 0x21040
-#define PIO_1_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_1_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_1_CAPTURE 0
-#define PIO_1_DATA_WIDTH 4
-#define PIO_1_DO_TEST_BENCH_WIRING 0
-#define PIO_1_DRIVEN_SIM_VALUE 0
-#define PIO_1_EDGE_TYPE "NONE"
-#define PIO_1_FREQ 50000000
-#define PIO_1_HAS_IN 1
-#define PIO_1_HAS_OUT 0
-#define PIO_1_HAS_TRI 0
-#define PIO_1_IRQ -1
-#define PIO_1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_1_IRQ_TYPE "NONE"
-#define PIO_1_NAME "/dev/pio_1"
-#define PIO_1_RESET_VALUE 0
-#define PIO_1_SPAN 16
-#define PIO_1_TYPE "altera_avalon_pio"
-
-
-/*
- * pio_2 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_pio_2 altera_avalon_pio
-#define PIO_2_BASE 0x21030
-#define PIO_2_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_2_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_2_CAPTURE 0
-#define PIO_2_DATA_WIDTH 8
-#define PIO_2_DO_TEST_BENCH_WIRING 0
-#define PIO_2_DRIVEN_SIM_VALUE 0
-#define PIO_2_EDGE_TYPE "NONE"
-#define PIO_2_FREQ 50000000
-#define PIO_2_HAS_IN 0
-#define PIO_2_HAS_OUT 1
-#define PIO_2_HAS_TRI 0
-#define PIO_2_IRQ -1
-#define PIO_2_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_2_IRQ_TYPE "NONE"
-#define PIO_2_NAME "/dev/pio_2"
-#define PIO_2_RESET_VALUE 0
-#define PIO_2_SPAN 16
-#define PIO_2_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_trigger altera_avalon_pio
+#define TRIGGER_BASE 0x21050
+#define TRIGGER_BIT_CLEARING_EDGE_REGISTER 0
+#define TRIGGER_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define TRIGGER_CAPTURE 1
+#define TRIGGER_DATA_WIDTH 1
+#define TRIGGER_DO_TEST_BENCH_WIRING 0
+#define TRIGGER_DRIVEN_SIM_VALUE 0
+#define TRIGGER_EDGE_TYPE "FALLING"
+#define TRIGGER_FREQ 50000000
+#define TRIGGER_HAS_IN 1
+#define TRIGGER_HAS_OUT 0
+#define TRIGGER_HAS_TRI 0
+#define TRIGGER_IRQ 2
+#define TRIGGER_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TRIGGER_IRQ_TYPE "EDGE"
+#define TRIGGER_NAME "/dev/trigger"
+#define TRIGGER_RESET_VALUE 0
+#define TRIGGER_SPAN 16
+#define TRIGGER_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */
