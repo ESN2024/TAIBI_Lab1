@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon Jan 15 10:01:15 2024
+Fitter Status : Successful - Mon Jan 15 20:03:02 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : TAIBI_Lab1
 Top-level Entity Name : Achraf_Lab1
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 1,808 / 49,760 ( 4 % )
-    Total combinational functions : 1,685 / 49,760 ( 3 % )
-    Dedicated logic registers : 943 / 49,760 ( 2 % )
-Total registers : 943
+Total logic elements : 1,823 / 49,760 ( 4 % )
+    Total combinational functions : 1,710 / 49,760 ( 3 % )
+    Dedicated logic registers : 963 / 49,760 ( 2 % )
+Total registers : 963
 Total pins : 15 / 360 ( 4 % )
 Total virtual pins : 0
 Total memory bits : 331,264 / 1,677,312 ( 20 % )

@@ -173,11 +173,6 @@ module Achraf_Lab1_mm_interconnect_0_router_001
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     Achraf_Lab1_mm_interconnect_0_router_001_default_decode the_default_decode(
@@ -216,7 +211,7 @@ module Achraf_Lab1_mm_interconnect_0_router_001
     end
 
     // ( 0x21040 .. 0x21050 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 18'h21040  && read_transaction  ) begin
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 18'h21040   ) begin
             src_channel = 6'b01000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end

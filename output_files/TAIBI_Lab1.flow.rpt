@@ -1,5 +1,5 @@
 Flow report for TAIBI_Lab1
-Mon Jan 15 10:01:26 2024
+Mon Jan 15 20:03:16 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Jan 15 10:01:21 2024       ;
+; Flow Status                        ; Successful - Mon Jan 15 20:03:10 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TAIBI_Lab1                                  ;
 ; Top-level Entity Name              ; Achraf_Lab1                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,808 / 49,760 ( 4 % )                      ;
-;     Total combinational functions  ; 1,685 / 49,760 ( 3 % )                      ;
-;     Dedicated logic registers      ; 943 / 49,760 ( 2 % )                        ;
-; Total registers                    ; 943                                         ;
+; Total logic elements               ; 1,823 / 49,760 ( 4 % )                      ;
+;     Total combinational functions  ; 1,710 / 49,760 ( 3 % )                      ;
+;     Dedicated logic registers      ; 963 / 49,760 ( 2 % )                        ;
+; Total registers                    ; 963                                         ;
 ; Total pins                         ; 15 / 360 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 331,264 / 1,677,312 ( 20 % )                ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/15/2024 09:59:56 ;
+; Start date & time ; 01/15/2024 20:01:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TAIBI_Lab1          ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 44343151178700.170530919511624         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 44343151178700.170534527918472         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Achraf_Lab1 ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:02     ; 1.0                     ; 4893 MB             ; 00:01:46                           ;
-; Fitter               ; 00:00:15     ; 1.4                     ; 5687 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4689 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.8                     ; 4846 MB             ; 00:00:07                           ;
-; Total                ; 00:01:25     ; --                      ; --                  ; 00:02:21                           ;
+; Analysis & Synthesis ; 00:01:20     ; 1.0                     ; 4893 MB             ; 00:02:23                           ;
+; Fitter               ; 00:00:20     ; 1.4                     ; 5674 MB             ; 00:00:35                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4690 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.9                     ; 4845 MB             ; 00:00:08                           ;
+; Total                ; 00:01:50     ; --                      ; --                  ; 00:03:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

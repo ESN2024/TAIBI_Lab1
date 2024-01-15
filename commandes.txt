@@ -1,5 +1,5 @@
 1) - nios2-bsp hal <out_bsp_dir> <system.sopcinfo> (créer le HAl)
-nios2-bsp hal software/bsp <system.sopcinfo>
+ nios2-bsp hal software/bsp Achraf_Lab1.sopcinfo
 2) - generer les makefiles
 
 nios2-app-generate-makefile \
@@ -7,6 +7,14 @@ nios2-app-generate-makefile \
  --bsp-dir <bsp_dir> \
  --elf-name <exec_name.elf> \
  --src-files <c_src_file.c>
+
+nios2-app-generate-makefile \
+ --app-dir software/app \
+ --bsp-dir software/bsp \
+ --elf-name executable.elf \
+ --src-files main.c
+
+
 3) make
 
 4) nios2-download -g -r <binary_name.elf> (telecharger sur la carte)
@@ -14,8 +22,3 @@ nios2-download -g -r executable.elf
 
 
 
-nios2-app-generate-makefile \
- --app-dir software/app \
- --bsp-dir software/bsp \
- --elf-name executable.elf \
- --src-files main.c

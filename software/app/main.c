@@ -5,59 +5,62 @@
 
 
 
-volatile int edge_capture;
+volatile int edge_cap;
+volatile int speed;
 
-
+// La fonction Interrupt Sub-Routine
 static void handle_interrupts(void* context)
 {   
-    volatile int* edge_capture_ptr = (volatile int*) context;
-    *edge_capture_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(TRIGGER_BASE);
-    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(TRIGGER_BASE,0);
-
+	// Pointeur vers la variable edge_cap
+    volatile int* edge_cap_ptr = (volatile int*) context;
+	// Lire le registre edgecapture et enregister le contenu dans la variable edge_cap   
+    *edge_cap_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(TRIGGER_BASE);
+    // Mettre le bit numéro 0 à l'état 1 pour le reset (pas besoin d'utiliser un masque car on a un seul bit)
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(TRIGGER_BASE,0);
+	// Variable pour allumer les LEDs
 	volatile  unsigned char one = 0x01;
+	// Boucle pour allumer les LEDs
 	for(int i = 0;i <= 7; i++){
-
+				// Ecrire dans le registre DATA de la base LEDS_8_BASE le contenu de la variable one
 				IOWR_ALTERA_AVALON_PIO_DATA(LEDS_8_BASE,one);
-				usleep(10000);
+				// Mettre en sleep, speed est gérer par polling dans la fonction main
+				usleep(10000 * speed);
+				// Décalage à gauche
 				one = one << 1;
-
 			}
+	// Après l'allumage de tout les LEDs on les mets à zeros
 	IOWR_ALTERA_AVALON_PIO_DATA(LEDS_8_BASE,0x00);
 
 
 }
 
-
+// Initialisation des interruptions
 static void init_interrupt_pio()
 {
-    //Recast the edge_capture point to match the
-    //alt_irq_register() function prototypo
-    void* edge_capture_ptr = (void*)&edge_capture;
-
-    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(TRIGGER_BASE,0x1);
+	// Casting
+    void* edge_cap_ptr = (void*)&edge_cap;
+	// Reset (comme vue au dessus)
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(TRIGGER_BASE,0);
-    alt_ic_isr_register(TRIGGER_IRQ_INTERRUPT_CONTROLLER_ID,
-        TRIGGER_IRQ, handle_interrupts, edge_capture_ptr, 0x0);
-
-	//mettre les leds à zeros
+	// Enregistrer l'interruption "handle_interrupts"
+    alt_irq_register( TRIGGER_IRQ, edge_cap_ptr, (void*)handle_interrupts); 
+	// Mettre les leds à zeros
 	IOWR_ALTERA_AVALON_PIO_DATA(LEDS_8_BASE,0x00);
 
 }
+
+
+
+
 
 
 
 int main(){
 
-    // Initialize the interrupt
+    // Inittalisation de l'interruption
     init_interrupt_pio();
+
+	// l'utilisation du polling pour changer la vitesse, il y 16 états
 	while(1){
-		if (edge_capture == 0x1) //bit position 0 corresponds to button press
-			{
-				edge_capture = 0; // reset variable to "unregister" event
-			}
+		speed = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_SPEED_4_BASE);		
 	}
-
-        
-
-    
 }
