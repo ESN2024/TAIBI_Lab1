@@ -22,3 +22,4 @@ nios2-download -g -r executable.elf
 
 
 
+nios2-bsp hal software/bsp Achraf_Lab1.sopcinfo \
