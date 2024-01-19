@@ -12,9 +12,9 @@ Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 - **Memoire RAM:** 40 ko.
 - **JTAG UART:** permettant le débogage.
 - **Clock:** 50 MHz.
-- **Trigger/IN:** entrée (KEY0) qui permet d'effectuer *une lancée* de Chenillard avec interruption d'une priorité de IRQ1.
-- **Switch_speed_4**: une entrée de 4 bits (boutons de switchs) pour fixer la vitesse.
-- **LEDS_8**: sortie de 8 bits (LEDS).
+- **Trigger[PIO: 1bit]:** entrée (KEY0) qui permet d'effectuer *une lancée* de Chenillard avec interruption d'une priorité de IRQ1.
+- **Switch_speed_4[PIO: 4bits]**: une entrée de 4 bits (boutons de switchs) pour fixer la vitesse.
+- **LEDS_8[PIO: 8bits]**: sortie de 8 bits (LEDS).
 
 #### 2 - Fichier QSYS:
 [Image de l'architecture]
@@ -45,15 +45,18 @@ Comme vu en cours, il est indispensable de générer le BSP/HAL, puis de créer 
 Ma stratégie pour effectuer ce TP a été réparties par plusieurs étape, pour passer d'une étape à l'autre j'ai effectué des tests de validation. Consultez les commits pour revenir à une étape précise. 
 
 **Étape 0 :** Programmation d'un programme Hello world exécuté sur CPU, j'ai utilisé *alt_printf()*.
+
 **Validation 0:** L'Intéraction entre les blocs IP : Nios2, JTAG, RAM.
 
 **Étape 1 :** Création d'un LED Chaser sans contrôle de vitesse. Pour cela, j'ai créé deux fonctions. La première est une fonction ISR (*handle_interrupts()*) qui gère l'interruption. Dans cette fonction, nous enregistrons d'abord la valeur du registre edge_capture dans un pointeur, puis nous mettons le bit numéro 0 du registre edge_capture à 1 pour le réinitialiser (arrêt de l'interruption). J'ai implémenté une boucle for qui met un 1 dans l'une des sorties du PIO LEDS_8, puis effectue une pause (*usleep*), et enfin décale le 1 d'un pas à gauche (voir *main.c*). La deuxième fonction (*init_interrupt_pio()*) sert à initialiser l'interruption. Dans cette fonction, on trouve :
 -   Activation d'une seule entrée d'interruption en écrivant 1 à l'emplacement correspondant des bits de masque d'interruption. Le macro utilisé est IOWR_ALTERA_AVALON_PIO_IRQ_MASK(base, data) défini dans le fichier *altera_avalon_pio_regs.h*.
 -   Réinitialisation du registre edge_capture.
 -   Enregistrement de l'ISR handle_interrupts() à l'aide de la fonction vue en cours *alt_irq_register(alt_u32 id, void context, void (isr)(void, alt_u32))*.
+
 **Validation 1 :** Processus de l'interruption. À chaque fois que l'on appuie sur le trigger, on observe le lancement du LED Chaser.
 
 **Étape 2 :** Ajout du contrôle de la vitesse. Quatre interrupteurs sont utilisés. Le mécanisme utilisé est le polling. À l'aide d'une variable intermédiaire de type *char*, on récupère les valeurs des 4 interrupteurs (on a 16 états) et on multiplie cette valeur par la variable speed dans la fonction ISR *handle_interrupts()*.
+
 **Validation 2 :** Le changement de la vitesse est effectué. Cependant, la vitesse ne se met pas à jour pendant le défilement du LED Chaser. Il faut attendre que celui-ci se termine pour régénérer un autre avec une autre vitesse (voir vidéo).
 
 **Étape 3 :** Refactoring du code
