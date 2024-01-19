@@ -1,5 +1,5 @@
 Fitter report for TAIBI_Lab1
-Mon Jan 15 23:56:51 2024
+Fri Jan 19 18:23:51 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jan 15 23:56:51 2024       ;
+; Fitter Status                      ; Successful - Fri Jan 19 18:23:51 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TAIBI_Lab1                                  ;
 ; Top-level Entity Name              ; Achraf_Lab1                                 ;
@@ -153,14 +153,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.45        ;
+; Average used               ; 1.29        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.0%      ;
-;     Processor 3            ;  15.0%      ;
-;     Processor 4            ;  15.0%      ;
+;     Processor 2            ;   9.7%      ;
+;     Processor 3            ;   9.7%      ;
+;     Processor 4            ;   9.7%      ;
 +----------------------------+-------------+
 
 
@@ -220,7 +220,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/PortableGit/TAIBI_Lab1/output_files/TAIBI_Lab1.pin.
+The pin-out file can be found in E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/output_files/TAIBI_Lab1.pin.
 
 
 +----------------------------------------------------------------------------+
@@ -1589,8 +1589,10 @@ Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity sld_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
-Info (332104): Reading SDC File: 'e:/portablegit/taibi_lab1/db/ip/achraf_lab1/submodules/achraf_lab1_nios2_gen2_0_cpu.sdc'
-Info (332104): Reading SDC File: 'e:/portablegit/taibi_lab1/db/ip/achraf_lab1/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'e:/portablegit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/achraf_lab1_nios2_gen2_0_cpu.sdc'
+Info (332104): Reading SDC File: 'e:/portablegit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/altera_reset_controller.sdc'
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'e:/portablegit/taibi_lab1/db/ip/achraf_lab1/submodules/achraf_lab1_nios2_gen2_0_cpu.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'e:/portablegit/taibi_lab1/db/ip/achraf_lab1/submodules/altera_reset_controller.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clk_clk was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register Achraf_Lab1_nios2_gen2_0:nios2_gen2_0|Achraf_Lab1_nios2_gen2_0_cpu:cpu|Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci:the_Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci|Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci_debug:the_Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci_debug|monitor_ready is being clocked by clk_clk
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
@@ -1604,17 +1606,17 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk_clk~input (placed in PIN N14 (CLK2p, DIFFIO_RX_R38p, DIFFOUT_R38p, High_Speed)) File: E:/PortableGit/TAIBI_Lab1/db/ip/achraf_lab1/achraf_lab1.v Line: 7
+Info (176353): Automatically promoted node clk_clk~input (placed in PIN N14 (CLK2p, DIFFIO_RX_R38p, DIFFOUT_R38p, High_Speed)) File: E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/achraf_lab1.v Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G9
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node altera_reset_controller:rst_controller|r_sync_rst  File: E:/PortableGit/TAIBI_Lab1/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 288
+Info (176353): Automatically promoted node altera_reset_controller:rst_controller|r_sync_rst  File: E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node altera_reset_controller:rst_controller|WideOr0~0 File: E:/PortableGit/TAIBI_Lab1/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 290
-        Info (176357): Destination node Achraf_Lab1_nios2_gen2_0:nios2_gen2_0|Achraf_Lab1_nios2_gen2_0_cpu:cpu|W_rf_wren File: E:/PortableGit/TAIBI_Lab1/db/ip/achraf_lab1/submodules/achraf_lab1_nios2_gen2_0_cpu.v Line: 3451
+        Info (176357): Destination node altera_reset_controller:rst_controller|WideOr0~0 File: E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 290
+        Info (176357): Destination node Achraf_Lab1_nios2_gen2_0:nios2_gen2_0|Achraf_Lab1_nios2_gen2_0_cpu:cpu|W_rf_wren File: E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/achraf_lab1_nios2_gen2_0_cpu.v Line: 3451
         Info (176357): Destination node Achraf_Lab1_nios2_gen2_0:nios2_gen2_0|Achraf_Lab1_nios2_gen2_0_cpu:cpu|Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci:the_Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci|Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci_debug:the_Achraf_Lab1_nios2_gen2_0_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer|din_s1 File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_std_synchronizer.v Line: 45
-Info (176353): Automatically promoted node altera_reset_controller:rst_controller|merged_reset~0  File: E:/PortableGit/TAIBI_Lab1/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 134
+Info (176353): Automatically promoted node altera_reset_controller:rst_controller|merged_reset~0  File: E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/db/ip/achraf_lab1/submodules/altera_reset_controller.v Line: 134
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1633,7 +1635,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  59 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has 2.5V VCCIO pins. 13 total pin(s) used --  39 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1646,24 +1648,24 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.71 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.43 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:09
-Info (144001): Generated suppressed messages file E:/PortableGit/TAIBI_Lab1/output_files/TAIBI_Lab1.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 5687 megabytes
-    Info: Processing ended: Mon Jan 15 23:56:53 2024
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:58
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/output_files/TAIBI_Lab1.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 5685 megabytes
+    Info: Processing ended: Fri Jan 19 18:23:53 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/PortableGit/TAIBI_Lab1/output_files/TAIBI_Lab1.fit.smsg.
+The suppressed messages can be found in E:/PortableGit/26869477436acdbd4a38e2197f9c44f255b404d9/output_files/TAIBI_Lab1.fit.smsg.
 
 

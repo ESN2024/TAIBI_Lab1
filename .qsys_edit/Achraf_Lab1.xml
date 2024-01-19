@@ -953,7 +953,7 @@
 										<fullscreen-action>false</fullscreen-action>
 										<node nodeId="1372710005721" orientation="HORIZONTAL" divider="0.16683417085427135">
 											<node nodeId="1375985011088" orientation="VERTICAL" divider="0.504054054054054">
-												<leaf id="1" nodeId="1375985003630">
+												<leaf id="0" nodeId="1375985003630">
 													<placeholders>
 														<placeholder>dock.single.Clock\ Domains\ \-\ Beta</placeholder>
 														<placeholder>dock.single.IP\ Catalog</placeholder>
@@ -1024,7 +1024,7 @@
 											</node>
 											<node nodeId="1372710005727" orientation="HORIZONTAL" divider="0.7193426042983566">
 												<node nodeId="1372710005733" orientation="VERTICAL" divider="0.75">
-													<leaf id="2" nodeId="1372710005735">
+													<leaf id="1" nodeId="1372710005735">
 														<placeholders>
 															<placeholder>dock.single.Connections</placeholder>
 															<placeholder>dock.single.System\ Contents</placeholder>
@@ -1076,7 +1076,7 @@
 													</leaf>
 												</node>
 												<node nodeId="1389812802503" orientation="VERTICAL" divider="0.6704331450094162">
-													<leaf id="0" nodeId="1389812800464">
+													<leaf id="2" nodeId="1389812800464">
 														<placeholders>
 															<placeholder>dock.single.Details</placeholder>
 															<placeholder>dock.single.Parameters</placeholder>
@@ -1125,16 +1125,6 @@
 								</layout>
 							</adjacent>
 							<children ignore="false">
-								<child>
-									<layout factory="predefined" placeholder="dock.single.Parameters">
-										<replacement id="dockablesingle Parameters"/>
-										<delegate id="delegate_ccontrol backup factory id">
-											<id>Parameters</id>
-											<area/>
-										</delegate>
-									</layout>
-									<children ignore="false"/>
-								</child>
 								<child>
 									<layout factory="predefined" placeholder="dock.single.IP\ Catalog">
 										<replacement id="dockablesingle IP Catalog"/>
@@ -1252,6 +1242,16 @@
 											<children ignore="false"/>
 										</child>
 									</children>
+								</child>
+								<child>
+									<layout factory="predefined" placeholder="dock.single.Parameters">
+										<replacement id="dockablesingle Parameters"/>
+										<delegate id="delegate_ccontrol backup factory id">
+											<id>Parameters</id>
+											<area/>
+										</delegate>
+									</layout>
+									<children ignore="false"/>
 								</child>
 							</children>
 						</root>

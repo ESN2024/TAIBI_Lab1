@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Achraf_Lab1" kind="system" version="18.1" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.01.15.20:00:45 -->
+ <!-- 2024.01.19.18:21:24 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1705345227</value>
+  <value>1705684861</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -13252,5 +13252,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <reportVersion>18.1 625</reportVersion>
- <uniqueIdentifier>A4423BDD28670000018D0E7F24CA</uniqueIdentifier>
+ <uniqueIdentifier>A4423BDD28670000018D22BD8F35</uniqueIdentifier>
 </EnsembleReport>

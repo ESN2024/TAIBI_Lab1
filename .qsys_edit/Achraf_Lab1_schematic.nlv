@@ -2,23 +2,23 @@
 # 
 preplace inst Achraf_Lab1.switch_speed_4 -pg 1 -lvl 3 -y 210
 preplace inst Achraf_Lab1.nios2_gen2_0.reset_bridge -pg 1
-preplace inst Achraf_Lab1.LEDS_8 -pg 1 -lvl 3 -y 310
+preplace inst Achraf_Lab1.LEDS_8 -pg 1 -lvl 3 -y 330
 preplace inst Achraf_Lab1.nios2_gen2_0 -pg 1 -lvl 2 -y 100
 preplace inst Achraf_Lab1.jtag_uart_0 -pg 1 -lvl 3 -y 110
 preplace inst Achraf_Lab1.clk_0 -pg 1 -lvl 1 -y 170
 preplace inst Achraf_Lab1 -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst Achraf_Lab1.trigger -pg 1 -lvl 3 -y 410
+preplace inst Achraf_Lab1.trigger -pg 1 -lvl 3 -y 430
 preplace inst Achraf_Lab1.nios2_gen2_0.clock_bridge -pg 1
 preplace inst Achraf_Lab1.nios2_gen2_0.cpu -pg 1
 preplace inst Achraf_Lab1.onchip_memory2_0 -pg 1 -lvl 3 -y 30
-preplace netloc FAN_OUT<net_container>Achraf_Lab1</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)trigger.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 840
+preplace netloc INTERCONNECT<net_container>Achraf_Lab1</net_container>(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)nios2_gen2_0.reset,(SLAVE)LEDS_8.reset,(MASTER)clk_0.clk_reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)switch_speed_4.reset,(SLAVE)trigger.reset,(SLAVE)jtag_uart_0.reset) 1 1 2 400 480 800
+preplace netloc INTERCONNECT<net_container>Achraf_Lab1</net_container>(SLAVE)LEDS_8.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)trigger.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)switch_speed_4.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)onchip_memory2_0.s1) 1 1 2 420 500 780
 preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)switch_speed_4.external_connection,(SLAVE)Achraf_Lab1.pio_1_external_connection) 1 0 3 NJ 240 NJ 240 NJ
-preplace netloc INTERCONNECT<net_container>Achraf_Lab1</net_container>(SLAVE)nios2_gen2_0.reset,(MASTER)clk_0.clk_reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)jtag_uart_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)trigger.reset,(SLAVE)switch_speed_4.reset,(SLAVE)LEDS_8.reset) 1 1 2 400 460 800
-preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)Achraf_Lab1.pio_2_external_connection,(SLAVE)LEDS_8.external_connection) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc INTERCONNECT<net_container>Achraf_Lab1</net_container>(MASTER)nios2_gen2_0.instruction_master,(MASTER)nios2_gen2_0.data_master,(SLAVE)switch_speed_4.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)trigger.s1,(SLAVE)LEDS_8.s1,(SLAVE)onchip_memory2_0.s1) 1 1 2 420 480 780
-preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)trigger.external_connection,(SLAVE)Achraf_Lab1.pio_0_external_connection) 1 0 3 NJ 440 NJ 440 NJ
-preplace netloc FAN_OUT<net_container>Achraf_Lab1</net_container>(SLAVE)trigger.clk,(SLAVE)switch_speed_4.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)LEDS_8.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1,(MASTER)clk_0.clk) 1 1 2 380 360 820
-preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)Achraf_Lab1.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)clk_0.clk_in,(SLAVE)Achraf_Lab1.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)Achraf_Lab1.pio_2_external_connection,(SLAVE)LEDS_8.external_connection) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc FAN_OUT<net_container>Achraf_Lab1</net_container>(MASTER)clk_0.clk,(SLAVE)trigger.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)LEDS_8.clk,(SLAVE)switch_speed_4.clk) 1 1 2 380 380 820
+preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)trigger.external_connection,(SLAVE)Achraf_Lab1.pio_0_external_connection) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc FAN_OUT<net_container>Achraf_Lab1</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)switch_speed_4.irq,(SLAVE)trigger.irq) 1 2 1 840
 preplace netloc EXPORT<net_container>Achraf_Lab1</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)Achraf_Lab1.reset) 1 0 1 NJ
 levelinfo -pg 1 0 170 1050
 levelinfo -hier Achraf_Lab1 180 210 540 890 1040
