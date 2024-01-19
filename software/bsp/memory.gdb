@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'Achraf_Lab1'
 # SOPC Builder design path: ../../Achraf_Lab1.sopcinfo
 #
-# Generated: Fri Jan 19 18:27:04 CET 2024
+# Generated: Sat Jan 20 00:13:56 CET 2024
 
 # DO NOT MODIFY THIS FILE
 #
