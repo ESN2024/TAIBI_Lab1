@@ -1,12 +1,14 @@
 # LED Chaser
 # I - Introduction:
 Le but de ce lab est de concevoir et réaliser un LED Chaser en mettant en pratique les principes de la conception conjointe vus au cours. Les deux mécanismes (interruption et polling) ont été utilisés afin de répondre au cahier des charges.
+
 **Interruption:** le bouton Trigger envoi une interruption afin de déclencher le LED Chaser.
+
 **Polling:** la survéillance du registre DATA des 4 switchs par polling permet de controller la vitesse en utilisant 16 états.
 
 # II - L'architecture du système:
 #### 1 - Architecture du design:
-[Image de l'architecture ![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")]
+![plot](./Photos/SYS.png)
 Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 - **NIOS II Core:** un softcore d'architecture Harvard et de jeu d'instruction réduit (RISC 32 bits) en mode economy.
 - **Memoire RAM:** 40 ko.
@@ -17,7 +19,7 @@ Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 - **LEDS_8[PIO: 8bits]**: sortie de 8 bits (LEDS).
 
 #### 2 - Fichier QSYS:
-[Image de l'architecture]
+![plot](./Photos/QSYS.png)
 Après la génération des blocs IP nécessaires pour cette architecture et dans le but de gérer les événements en utilisant les interruptions, deux niveaux d'IRQ ont été générés : IRQ1 (niveau 1) pour le PIO du Trigger  et IRQ2 (niveau 2) pour le commutateur de vitesse PIO (switch_speed_4).
 
 # III - Progrès:
@@ -65,7 +67,9 @@ Comme montré dans le QSYS ci-dessus, l'objectif de générer une IRQ par les sw
 
 # IV - Résultats:
 La video ci-dessous montre une démonstration du LED Chaser:
-[Video]
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/ASehAYubAQM)](https://youtu.be/ASehAYubAQM)
+
 
 # V - Conclusion:
 En partant de la conception jusqu'à la réalisation de ce TP, je me suis familiariser avec la conception conjointe.Par conséquent gérer un softcore de type NIOS2 n'est plus une boite noire.Dans le coté embarqué l'utilisation d'un type usuel comme *int* peut causer des problèmes du Memory Overflow surtout dans ce cas ou on avait une mémoire RAM de 40 KO.
