@@ -210,8 +210,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :      
 GND                          : E7        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
-reset_reset_n                : E10       : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+reset_reset_n                : E11       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
 pio_2_external_connection_export[6] : E14       : output : 2.5 V             :         : 7         : Y              

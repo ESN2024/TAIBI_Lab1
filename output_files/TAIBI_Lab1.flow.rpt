@@ -1,5 +1,5 @@
 Flow report for TAIBI_Lab1
-Sat Jan 20 00:12:01 2024
+Wed Jan 24 11:57:25 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Jan 20 00:11:55 2024       ;
+; Flow Status                        ; Successful - Wed Jan 24 11:57:25 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TAIBI_Lab1                                  ;
 ; Top-level Entity Name              ; Achraf_Lab1                                 ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,823 / 49,760 ( 4 % )                      ;
-;     Total combinational functions  ; 1,710 / 49,760 ( 3 % )                      ;
-;     Dedicated logic registers      ; 963 / 49,760 ( 2 % )                        ;
-; Total registers                    ; 963                                         ;
+; Total logic elements               ; 1,749 / 49,760 ( 4 % )                      ;
+;     Total combinational functions  ; 1,620 / 49,760 ( 3 % )                      ;
+;     Dedicated logic registers      ; 936 / 49,760 ( 2 % )                        ;
+; Total registers                    ; 936                                         ;
 ; Total pins                         ; 15 / 360 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 331,264 / 1,677,312 ( 20 % )                ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/20/2024 00:10:09 ;
+; Start date & time ; 01/24/2024 11:53:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TAIBI_Lab1          ;
 +-------------------+---------------------+
@@ -77,9 +77,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 44343151178700.170570580917980         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 44343151178700.170609358020468         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Achraf_Lab1 ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Achraf_Lab1 ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Achraf_Lab1 ; Top        ;
@@ -95,11 +99,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:17     ; 1.0                     ; 4893 MB             ; 00:02:14                           ;
-; Fitter               ; 00:00:18     ; 1.5                     ; 5667 MB             ; 00:00:31                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4690 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.9                     ; 4846 MB             ; 00:00:08                           ;
-; Total                ; 00:01:45     ; --                      ; --                  ; 00:02:57                           ;
+; Analysis & Synthesis ; 00:01:48     ; 1.0                     ; 4896 MB             ; 00:03:00                           ;
+; Fitter               ; 00:00:26     ; 1.2                     ; 5670 MB             ; 00:00:36                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4689 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.5                     ; 4845 MB             ; 00:00:10                           ;
+; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4732 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4689 MB             ; 00:00:08                           ;
+; Total                ; 00:02:40     ; --                      ; --                  ; 00:04:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,6 +118,8 @@ refer to the applicable agreement for further details.
 ; Fitter               ; LAPTOP-5BFTO48J  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-5BFTO48J  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-5BFTO48J  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; LAPTOP-5BFTO48J  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-5BFTO48J  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -122,6 +130,8 @@ quartus_map --read_settings_files=on --write_settings_files=off TAIBI_Lab1 -c TA
 quartus_fit --read_settings_files=off --write_settings_files=off TAIBI_Lab1 -c TAIBI_Lab1
 quartus_asm --read_settings_files=off --write_settings_files=off TAIBI_Lab1 -c TAIBI_Lab1
 quartus_sta TAIBI_Lab1 -c TAIBI_Lab1
+quartus_cdb TAIBI_Lab1 -c TAIBI_Lab1 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off TAIBI_Lab1 -c TAIBI_Lab1
 
 
 

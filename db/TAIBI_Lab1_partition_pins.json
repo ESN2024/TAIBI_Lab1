@@ -40,11 +40,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pio_0_external_connection_export",
+					"name" : "pio_1_external_connection_export[0]",
 					"strict" : false
 				},
 				{
-					"name" : "pio_1_external_connection_export[0]",
+					"name" : "pio_0_external_connection_export",
 					"strict" : false
 				},
 				{
@@ -52,11 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pio_1_external_connection_export[3]",
+					"name" : "pio_1_external_connection_export[2]",
 					"strict" : false
 				},
 				{
-					"name" : "pio_1_external_connection_export[2]",
+					"name" : "pio_1_external_connection_export[3]",
 					"strict" : false
 				},
 				{
